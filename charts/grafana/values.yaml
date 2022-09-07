@@ -606,25 +606,25 @@ notifiers: {}
 ## `path` must be /var/lib/grafana/dashboards/<provider_name>
 ##
 dashboardProviders:
- dashboardproviders.yaml:
-   apiVersion: 1
-   providers:
-   - name: 'default'
-     orgId: 1
-     folder: ''
-     type: file
-     disableDeletion: false
-     editable: true
-     options:
-       path: /var/lib/grafana/dashboards/default
-  - name: 'storage'
-    orgId: 1
-    folder: ''
-    type: file
-    disableDeletion: false
-    editable: true
-    options:
-      path: /var/lib/grafana/dashboards/storage
+  dashboardproviders.yaml:
+    apiVersion: 1
+    providers:
+    - name: 'default'
+      orgId: 1
+      folder: ''
+      type: file
+      disableDeletion: false
+      editable: true
+      options:
+        path: /var/lib/grafana/dashboards/default
+    - name: 'storage'
+      orgId: 1
+      folder: ''
+      type: file
+      disableDeletion: false
+      ditable: true
+      options:
+        path: /var/lib/grafana/dashboards/storage
 
 
 ## Configure grafana dashboard to import
@@ -634,12 +634,12 @@ dashboardProviders:
 ## dashboards per provider, use provider name as key.
 ##
 dashboards:
-    default:
-      custom-dashboard:
-        file: dashboards/azure-monitor-for-containers-metrics_rev6.json
-    storage:
-      another-dashboard:
-        file: dashboards/azure-insights-storage-accounts_rev3.json
+  default:
+    custom-dashboard:
+      file: dashboards/azure-monitor-for-containers-metrics_rev6.json
+  storage:
+    another-dashboard:
+      file: dashboards/azure-insights-storage-accounts_rev3.json
   #   some-dashboard:
   #     json: |
   #       $RAW_JSON
