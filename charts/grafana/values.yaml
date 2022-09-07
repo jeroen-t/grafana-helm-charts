@@ -617,6 +617,15 @@ dashboardProviders:
      editable: true
      options:
        path: /var/lib/grafana/dashboards/default
+  - name: 'storage'
+     orgId: 1
+     folder: ''
+     type: file
+     disableDeletion: false
+     editable: true
+     options:
+       path: /var/lib/grafana/dashboards/storage
+
 
 ## Configure grafana dashboard to import
 ## NOTE: To use dashboards you must also enable/configure dashboardProviders
@@ -628,6 +637,7 @@ dashboards:
     default:
       custom-dashboard:
         file: dashboards/azure-monitor-for-containers-metrics_rev6.json
+    storage:
       another-dashboard:
         file: dashboards/azure-insights-storage-accounts_rev3.json
   #   some-dashboard:
